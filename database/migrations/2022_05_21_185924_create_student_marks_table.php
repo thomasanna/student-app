@@ -21,7 +21,7 @@ class CreateStudentMarksTable extends Migration
             $table->string('science')->nullable();
             $table->string('history')->nullable(); 
             $table->unsignedBigInteger('term_id')->nullable();
-            $table->foreign('term')->references('id')->on('terms')->onDelete('set null');  
+            $table->foreign('term_id')->references('id')->on('terms')->onDelete('set null');
             $table->string('total_mark')->nullable(); 
             $table->timestamps();
         });
